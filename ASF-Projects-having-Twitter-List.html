@@ -1,0 +1,1155 @@
+<!doctype html>
+
+<!-- -->
+<!-- Objective: To house ASF projects having Twitter Handle  -->
+<!-- How TO: -->
+<!-- 1. Launch the ASF Project List URL: https://projects.apache.org/projects.html?name -->
+<!-- 2. Click on the individual Project name -->
+<!-- 3. Capture the information such as: Short Description, Category, Language, and the maintainer. -->
+<!-- 4. Launch Twitter and search for the ASF project. If the handle exits, capture the handle.
+<!-- 5. As we use CSS to highlight the ASF handle, we use CSS after selector to highlight the Twitter handle in Blue color. -->
+<!-- -->
+
+<html lang="en">
+
+ <head>
+   <meta charset="utf-8">
+   
+   <title> ASF | Twitter handle</title>
+   <meta name="description" content="Apache Software Foundation (ASF) projects having Twitter handle">
+   
+   <style> 
+
+	  .col-ASF {
+	     width:15%
+	  }
+	  
+	  .col-Description {
+	     width:40%
+	  }
+	  
+	  .col-Category {
+	     width:5%
+	  }
+	  
+	  .col-Language {
+	     width:5%
+	  }
+	  
+	  .col-Twitter {
+	     width:5%
+	  }
+	  
+	  .col-Facebook {
+	     width:5%
+	  }
+	  
+	  .col-Maintainer {
+	     width:10%
+	  }
+	  
+	.ASFdata {
+      width: 100%;
+	  word-wrap:normal;
+	  overflow-wrap:normal;
+	  font-family:"Arial Narrow", Courier;
+	  font-size:11;
+	}
+	
+	.ASFdata th {
+          background: lightgreen;
+          color: black;
+		  text-align: left;
+          padding: 5px 10px;
+      }
+	  
+	  .ASFdata td {
+	    word-wrap:normal;
+		overflow-wrap:normal;
+		hyphens:auto;
+		text-align: left;
+        padding: 5px 10px;
+	  }
+
+	  .ASFdata tr:nth-child(even) {
+          background: lightpink;
+     }
+	 
+	 td[twitter-handle="Not Available"]:after {
+	   content:attr(twitter-handle);
+	 }
+	 
+	 
+	 td[twitter-handle^="@"]:after {
+	   content:attr(twitter-handle);
+	   color:blue;
+	 }
+	 
+   </style>
+ </head>
+ 
+ <body>
+    <table id="ASFdata" class="ASFdata">
+	  <thead>
+	     <tr> 
+		   <th class="col-ASF"> ASF Project</th>
+		   <th class="col-Description"> Description </th>
+		   <th class="col-Category"> Category </th>
+		   <th class="col-Language"> Language </th>
+		   <th class="col-Twitter"> Twitter </th>
+		   <th class="col-Facebook"> Facebook </th>
+		   <th class="col-Maintainer"> Maintainer </th>
+		 </tr>
+	  </thead>
+	  
+	   <tfoot>
+	     <tr> 
+		   <th class="col-ASF"> ASF Project</th>
+		   <th class="col-Description"> Description </th>
+		   <th class="col-Category"> Category </th>
+		   <th class="col-Language"> Language </th>
+		   <th class="col-Twitter"> Twitter </th>
+		   <th class="col-Facebook"> Facebook </th>
+		   <th class="col-Maintainer"> Maintainer </th>
+		 </tr>
+	  </tfoot>
+	  
+      <tbody>
+	      <tr>
+		    <td> 1. <a href="http://ant.apache.org/antlibs/dotnet/"> Apache .NET Ant Library </a> </td>
+			<td>Support for Mono and Microsoft .NET development using Ant </td>
+			<td>build-management</td>
+			<td>Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td> Not Checked </td> 
+			<td> </td>
+		  </tr>
+		  
+		   <tr>
+		    <td> 2. <a href="http://abdera.apache.org">  Apache Abdera </a> </td>
+			<td> An open source Atom implementation</td>
+			<td>xml</td>
+			<td>Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td> Not Checked </td> 
+			<td> </td>
+		  </tr>
+		
+		   <tr>
+		    <td>3. <a href=" https://accumulo.apache.org">   Apache Accumulo </a> </td>
+			<td>The Apache Accumulo sorted, distributed key/value store is based on Google's BigTable design.</td>
+			<td>database</td>
+			<td>Java</td>
+			<td twitter-handle="@ApacheAccumulo"></td>
+			<td> Not Checked </td> 
+			<td>Billie Rinaldi</td>
+		  </tr>
+		  
+		  
+		  <tr>
+			<td>4.<a href="http://ace.apache.org/"> Apache Ace </a> </td>
+			<td>Apache Ace is a distribution framework that allows you to centrally manage and distribute software components, configuration data and other artifacts to target systems. </td>
+			<td>osgi</td>
+			<td>Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td><a href="mailto:dev@ace.apache.org">dev@ace.apache.org</a></td>
+		</tr>
+		<tr>
+			<td>5.<a href="http://activemq.apache.org/"> Apache Activemq </a> </td>
+			<td>Activemq is the most popular and powerful open source message broker.</td>
+			<td>network-server, network-client</td>
+			<td>Java, c, c++, ruby</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td>Hiram R. Chirino </td>
+		</tr>
+		<tr>
+			<td>6. <a href="http://airavata.apache.org/"> Apache Airavata </a> </td>
+			<td >Apache Airavata is a distributed system software framework to manage simple to composite applications with complex execution and workflow patterns on diverse computational resources</td>
+			<td >network-server, cloud, big data</td>
+			<td>Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td>suresh marru </td>
+		</tr>
+		<tr>
+			<td> 7. <a href="http://airflow.incubator.apache.org/">Apache Airflow (incubating)</a> </td>
+			<td> Airflow is a workflow automation and scheduling system that can be used to author and manage data pipelines.</td>
+			<td>python</td>
+			<td></td>
+			<td twitter-handle="@ApacheAirflow"></td>
+			<td>Not Checked</td>
+			<td><br></td>
+		</tr>
+		<tr>
+			<td> 8. <a href="http://allura.apache.org/"> Apache Allura </a> </td>
+			<td >Forge software for hosting software projects</td>
+			<td>content</td>
+			<td>python</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td><br></td>
+		</tr>
+		<tr>
+			<td> 9. <a href="http://ambari.apache.org/"> Apache Ambari </a> </td>
+			<td >Apache ambari makes hadoop cluster provisioning, managing, and monitoring dead simple.</td>
+			<td>big-data</td>
+			<td>Java, python, Javascript</td>
+			<td twitter-handle="@ApacheAmbari"></td>
+			<td>Not Checked</td>
+			<td>yusaku sako </td>
+		</tr>
+		
+		<tr>
+			<td>10.<a href="http://velocity.apache.org/anakia/"> Apache Anakia</a></td>
+			<td >Anakia uses apache velocity to generate documents based on xml source files</td>
+			<td>library</td>
+			<td>Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td><br></td>
+		</tr>
+		
+		<tr>
+			<td> 11. <a href="http://annotator.incubator.apache.org/"> Apache Annotator (incubating) </a> </td>
+			<td >Annotator provides annotation enabling code for browsers, servers, and humans.</td>
+			<td></td>
+			<td></td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+
+        <tr>
+			<td> 12. <a href="http://ant.apache.org"> Apache Ant </a> </td>
+			<td >Apache Ant is a Java-based build tool.</td>
+			<td>build-management</td>
+			<td>Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+
+		
+		<tr>
+			<td> 13. <a href="http://ant.apache.org/antlibs/antunit/"> Apache AntUnit </a> </td>
+			<td>Test-Framework for Testing Ant Tasks and Types</td>
+			<td>build-management, testing</td>
+			<td>Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 14. <a href="http://any23.apache.org"> Apache Any23  </a> </td>
+			<td>Anything To Triples (Any23) is a library, a web service and a command line tool that extracts structured data in RDF format from a variety of Web documents.</td>
+			<td>content</td>
+			<td>Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td><a href="mailto:any23@any23.apache.org">Apache Any23 Development Team </a></td>
+		</tr>
+		
+		<tr>
+			<td> 15. <a href="http://apex.apache.org"> Apache Apex  </a> </td>
+			<td> Enterprise-grade unified stream and batch processing engine.</td>
+			<td>content</td>
+			<td>Java</td>
+			<td twitter-handle="@ApacheApex"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 16. <a href=" http://archiva.apache.org"> Apache Archiva  </a> </td>
+			<td> Apache Archiva software is an extensible repository management tool that helps taking care of your own personal or enterprise-wide build artifact repository.</td>
+			<td>build-management</td>
+			<td>Java</td>
+			<td twitter-handle="@Archiva"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 17. <a href="http://ariatosca.incubator.apache.org/"> Apache AriaTosca (Incubating)   </a> </td>
+			<td> Apache Archiva software is an extensible repository management tool that helps taking care of your own personal or enterprise-wide build artifact repository.</td>
+			<td>repository-management</td>
+			<td>Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 18. <a href=" https://aries.apache.org/"> Apache Aries  </a> </td>
+			<td> OSGi Enterprise Programming Model </td>
+			<td>library</td>
+			<td>Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td> Kevan Lee Miller</td>
+		</tr>
+		
+		<tr>
+			<td> 19. <a href="http://arrow.apache.org/"> Apache Arrow   </a> </td>
+			<td> Powering Columnar In-Memory Analytics</td>
+			<td>Analytics</td>
+			<td>Java</td>
+			<td twitter-handle="@ApacheArrow"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 20. <a href="http://asterixdb.apache.org/"> Apache AsterixDB  </a> </td>
+			<td> open source Big Data Management System </td>
+			<td>database</td>
+			<td>Java</td>
+			<td twitter-handle="@AsterixDB"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 21. <a href="http://atlas.incubator.apache.org/"> Apache Atlas (Incubating) </a> </td>
+			<td> A scalable and extensible set of core foundational governance services enabling enterprises meet their compliance requirements within Hadoop </td>
+			<td>data-governance</td>
+			<td>Python</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 22. <a href="http://aurora.apache.org/"> Apache Aurora  </a> </td>
+			<td> Apache Avro is a data serialization system. </td>
+			<td>library, big-data  </td>
+			<td>C, C++,  C#,  Java,  PHP,  Python,  Ruby </td>
+			<td twitter-handle="@ApacheAuroa"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 23. <a href="http://ws.apache.org/axiom/"> Apache Axiom </a> </td>
+			<td> Apache Axiom is an XML object model supporting deferred parsing </td>
+			<td>library, xml </td>
+			<td>Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 24. <a href="http://axis.apache.org/axis2/java/core"> Apache Axis2 </a> </td>
+			<td> Apache Axis2 is a service hosting and consumption framework that makes it easy to use SOAP and Web Services </td>
+			<td>xml,http,network-server,network-client   </td>
+			<td>Java,C</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 25. <a href="http://bahir.apache.org/"> Apache Bahir </a> </td>
+			<td> Extensions to distributed analytic platforms such as Apache Spark</td>
+			<td>big-data</td>
+			<td>Java</td>
+			<td twitter-handle="@ApacheBahir"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		
+		<tr>
+			<td> 26. <a href="http://bahir.apache.org/"> Apache BatchEE (Incubating) </a> </td>
+			<td> BatchEE projects aims to provide a JBatch implementation (aka JSR352) and a set of useful extensions for this specification.</td>
+			<td>library</td>
+			<td>Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 27. <a href="http://xmlgraphics.apache.org/batik/"> Apache Batik  </a> </td>
+			<td> The Apache Foundation's Java-based toolkit for SVG generation and manipulation.</td>
+			<td>graphics, xml</td>
+			<td>Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 28. <a href="http://beam.incubator.apache.org/"> Apache Beam (Incubating)   </a> </td>
+			<td> Unified model and set of language-specific SDKs for defining and executing data processing workflows</td>
+			<td>library</td>
+			<td>Java</td>
+			<td twitter-handle="@ApacheBeam"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 29. <a href="http://bigtop.apache.org/"> Apache Bigtop  </a> </td>
+			<td> A 100% community-driven Bigdata management platform.</td>
+			<td>big-data</td>
+			<td>Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 30. <a href="http://bigtop.apache.org/"> Apache Bloodhound  </a> </td>
+			<td>  Apache Bloodhound is a software development collaboration tool, including issue tracking, wiki and repository browsing. </td>
+			<td>build-management</td>
+			<td>Python</td>
+			<td twitter-handle="@apbloodhound"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 31. <a href="http://blur.incubator.apache.org/"> Apache Blur (Incubating) </a> </td>
+			<td>  Blur is a search platform capable of searching massive amounts of data in a cloud computing environment. </td>
+			<td></td>
+			<td></td>
+			<td twitter-handle="@ApacheBlur"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 32. <a href="http://bookkeeper.apache.org/"> Apache BookKeeper </a> </td>
+			<td>A reliable replicated log service. </td>
+			<td>big-data </td>
+			<td>Java</td>
+			<td twitter-handle="@asfbookkeeper"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		
+		
+		<tr>
+			<td> 33. <a href="http://brooklyn.apache.org"> Apache Brooklyn  </a> </td>
+			<td>Apache Brooklyn is a framework for modeling, monitoring, and managing applications through autonomic blueprints.</td>
+			<td>cloud</td>
+			<td>Java</td>
+			<td twitter-handle="@ApacheBrooklyn"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+	
+    	<tr>
+			<td> 34. <a href=" http://buildr.apache.org"> Apache Buildr   </a> </td>
+			<td>Apache Buildr is a build system for Java-based applications, including support for Scala, Groovy and a growing number of JVM languages and tool</td>
+			<td>build-management</td>
+			<td>Java</td>
+			<td twitter-handle="@buildr"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+	
+	
+	    <tr>
+			<td> 35. <a href="http://bval.apache.org/"> Apache BVal </a> </td>
+			<td>Bean Validation API Implementation</td>
+			<td>javaee, library</td>
+			<td>Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 36. <a href="https://calcite.apache.org"> Apache Calcite  </a> </td>
+			<td>A dynamic data management framework.</td>
+			<td>big-data   hadoop   sql  </td>
+			<td>Java</td>
+			<td twitter-handle="@ApacheCalcite"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 37. <a href="http://camel.apache.org/"> Apache Camel </a> </td>
+			<td>Apache Camel is a powerful open source integration framework based on known Enterprise Integration Patterns.</td>
+			<td>osgi   network-server   network-client  </td>
+			<td>Java  XML  Python  Groovy  JavaScript  Ruby  SQL  Scala  PHP </td>
+			<td twitter-handle="@cameltweet"></td>
+			<td>Not Checked</td>
+			<td>Christian Mueller </td>
+		</tr>
+		
+		<tr>
+			<td> 38. <a href="http://carbondata.incubator.apache.org/"> Apache CarbonData (Incubating) </a> </td>
+			<td> Apache Hadoop native file format for faster interactive query using advanced columnar storage, index, compression and encoding techniques to improve computing efficiency, in turn it will help speedup queries an order of magnitude faster over PetaBytes of data</td>
+			<td>big-data</td>
+			<td>Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 39. <a href="http://cassandra.apache.org"> Apache Cassandra  </a> </td>
+			<td> The Apache Cassandra database is the right choice when you need scalability and high availability without compromising performance</td>
+			<td>database</td>
+			<td>Java</td>
+			<td twitter-handle="@cassandra"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 40. <a href="http://cayenne.apache.org"> Apache Cayenne   </a> </td>
+			<td> User-friendly Java ORM with tools</td>
+			<td>database,library, network-server, network-client, xml, web-framework  </td>
+			<td>Java</td>
+			<td twitter-handle="@ApacheCayenne"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 41. <a href="http://celix.apache.org"> Apache Celix </a> </td>
+			<td> OSGi framework implementation in C.</td>
+			<td>network-server</td>
+			<td>C</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 42. <a href="http://logging.apache.org/log4j/docs/chainsaw.html"> Apache Chainsaw </a> </td>
+			<td>Apache Chainsaw is a GUI log viewer</td>
+			<td>logger</td>
+			<td>Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 43. <a href="http://chemistry.apache.org">Apache Chemistry </a> </td>
+			<td>Apache Chemistry provides open source implementations of the Content Management Interoperability Services (CMIS) specification.</td>
+			<td>content-management</td>
+			<td>Java,Python, PHP, C#,  Objective-C </td>
+			<td twitter-handle="@apachechemistry"></td>
+			<td>Not Checked</td>
+			<td>Florian Müller</td>
+		</tr>
+		
+		<tr>
+			<td> 44. <a href=" http://chukwa.apache.org/">Apache Chukwa </a> </td>
+			<td> Chukwa is an open source data collection system for monitoring large distributed systems.</td>
+			<td>hadoop</td>
+			<td>Java, JavaScript </td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 45. <a href="http://clerezza.apache.org">Apache Clerezza </a> </td>
+			<td> Clerezza is a service platform which provides a set of functionality for management of semantically linked data accessible through RESTful Web Services and in a secured way</td>
+			<td>osgi,content  </td>
+			<td>Java  Scala</td>
+			<td twitter-handle="@clerezza"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		
+		<tr>
+			<td> 46. <a href="http://cmda.incubator.apache.org/">Apache Climate Model Diagnostic Analyzer (Incubating) </a> </td>
+			<td> CMDA provides web services for multi-aspect physics-based and phenomenon-oriented climate model performance evaluation and diagnosis through the comprehensive and synergistic use of multiple observational data, reanalysis data, and model outputs. </td>
+			<td></td>
+			<td></td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		
+		<tr>
+			<td> 47. <a href="http://cloudstack.apache.org">Apache CloudStack </a> </td>
+			<td> Apache CloudStack is an IaaS (“Infrastracture as a Service”) cloud orchestration platform.</td>
+			<td>cloud</td>
+			<td>Java,Python </td>
+			<td twitter-handle="@CloudStack"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 48. <a href="http://cocoon.apache.org/">Apache Cocoon  </a> </td>
+			<td> Web development framework: separation of concerns, component-based. </td>
+			<td>database,graphics,http,network-client,network-server,web-framework,xml </td>
+			<td> Java, XML </td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		
+		<tr>
+			<td> 49. <a href="http://commons.apache.org/bcel/">Apache Commons BCEL </a> </td>
+			<td> Bytecode Engineering Library </td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 50. <a href="https://commons.apache.org/proper/beanutils/">Apache Commons BeanUtils </a> </td>
+			<td>  Commons BeanUtils</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 51. <a href="http://commons.apache.org/bsf/">Apache Commons BSF </a> </td>
+			<td>Framework that provides scripting language support within Java applications</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 52. <a href="http://commons.apache.org/chain/">Apache Commons Chain </a> </td>
+			<td>An implmentation of the GoF Chain of Responsibility pattern</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 53. <a href="http://commons.apache.org/cli/">Apache Commons CLI  </a> </td>
+			<td>Commons CLI provides a simple API for presenting, proecessing and validating a command line interface.</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 54. <a href="http://commons.apache.org/codec/">Apache Commons Codec </a> </td>
+			<td>Simple encoders and decoders</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 55. <a href="http://commons.apache.org/collections/">Apache Commons Collections  </a> </td>
+			<td>Commons Collections</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		
+		<tr>
+			<td> 56. <a href="http://commons.apache.org/compress/">Apache Commons Compress </a> </td>
+			<td>Commons Compress</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 57. <a href="http://commons.apache.org/configuration/">Apache Commons Configuration </a> </td>
+			<td>Common Configuration</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 58. <a href="http://commons.apache.org/daemon/">Apache Commons Daemon </a> </td>
+			<td>Commons Daemon</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 59. <a href="http://commons.apache.org/dbcp/">Apache Commons DBCP  </a> </td>
+			<td>Commons Database Connection Pooling</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 60. <a href="http://commons.apache.org/dbutils/">Apache Commons DbUtils </a> </td>
+			<td>A package of Java utility classes for easing JDBC development</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 61. <a href="http://commons.apache.org/digester/">Apache Commons Digester  </a> </td>
+			<td> Rule based XML->Java object mapping module</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 62. <a href="http://commons.apache.org/discovery/">Apache Commons Discovery   </a> </td>
+			<td> Commons Discovery</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		
+		<tr>
+			<td> 63.<a href="http://commons.apache.org/discovery/">Apache Commons EL </a> </td>
+			<td>Commons EL</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 64.<a href="http://commons.apache.org/email/">Apache Commons Email  </a> </td>
+			<td>Commons Email</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 65.<a href="http://commons.apache.org/exec/">Apache Commons Exec</a> </td>
+			<td>A library to reliably execute external processes from within the JVM</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		
+		<tr>
+			<td> 66.<a href="http://commons.apache.org/fileupload/">Apache Commons FileUpload </a> </td>
+			<td> File upload component for Java servlets</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 67.<a href="http://commons.apache.org/functor/">Apache Commons Functor  </a> </td>
+			<td> Commons Functor</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		
+		<tr>
+			<td> 68.<a href=" http://hc.apache.org/httpclient-3.x/">Apache Commons HttpClient </a> </td>
+			<td> Client-side HTTP implementation in Java.</td>
+			<td>http   library   network-client  </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		
+		<tr>
+			<td> 69.<a href="http://commons.apache.org/io/">Apache Commons IO </a> </td>
+			<td> Commons IO</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		
+		<tr>
+			<td> 70.<a href="http://commons.apache.org/jci/">Apache Commons JCI </a> </td>
+			<td> Commons JCI</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 71.<a href="http://commons.apache.org/proper/commons-jcs/">Apache Commons JCS  </a> </td>
+			<td> Java Caching System</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		
+		<tr>
+			<td> 72.<a href="http://commons.apache.org/jexl/">Apache Commons JEXL</a> </td>
+			<td>Apache Commons JEXL Expression Language Engine</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		
+		<tr>
+			<td> 73.<a href="http://commons.apache.org/jxpath/">Apache Commons JXPath </a> </td>
+			<td> XPath for Java Objects</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 74.<a href="http://commons.apache.org/lang/">Apache Commons Lang </a> </td>
+			<td> Java Common Components</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 75.<a href="http://commons.apache.org/launcher/">Apache Commons Launcher  </a> </td>
+			<td> Commons Launcher</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		
+		<tr>
+			<td> 76.<a href="http://commons.apache.org/logging/">Apache Commons Logging </a> </td>
+			<td> Commons Logging</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 77.<a href="http://commons.apache.org/math/">Apache Commons Math </a> </td>
+			<td> Apache Commons Math</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 78.<a href="http://commons.apache.org/modeler/">Apache Commons Modeler </a> </td>
+			<td> Commons Modeler</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		
+		<tr>
+			<td> 79.<a href="http://commons.apache.org/net/">Apache Commons Net </a> </td>
+			<td> Apache Commons Net</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 80.<a href="http://commons.apache.org/proper/commons-ognl/">Apache Commons OGNL </a> </td>
+			<td> Object Graph Navigation Library</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		
+		<tr>
+			<td> 81.<a href="http://commons.apache.org/pool/">Apache Commons Pool  </a> </td>
+			<td> Commons Object Pooling Library</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 82.<a href="http://commons.apache.org/proxy/">Apache Commons Proxy</a> </td>
+			<td> Commons Dynamic Proxy Library</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 83.<a href="http://commons.apache.org/scxml/">Apache Commons SCXML </a> </td>
+			<td> A Java implementation of State Chart XML</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 84.<a href="http://commons.apache.org/validator/">Apache Commons Validator </a> </td>
+			<td> Validation Framework and Routines</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 85.<a href="http://commons.apache.org/vfs/">Apache Commons VFS </a> </td>
+			<td> Commons VFS</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 86.<a href="http://commons.apache.org/weaver/">Apache Commons Weaver </a> </td>
+			<td> Java Common Components</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 87.<a href="http://community.apache.org/">Apache Community Development  </a> </td>
+			<td> Resources to help people become involved with Apache projects</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 88.<a href="http://ant.apache.org/antlibs/compress/">Apache Compress Ant Library </a> </td>
+			<td> Provides Support for Some Archive Formats not Supported by Ant's Core</td>
+			<td>library </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 89.<a href="http://cordova.apache.org">Apache Cordova  </a> </td>
+			<td> A platform for building native mobile applications using HTML, CSS and JavaScript. </td>
+			<td>library, mobile</td>
+			<td> Java</td>
+			<td twitter-handle="@apachecordova"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 90.<a href="http://couchdb.apache.org/">Apache CouchDB   </a> </td>
+			<td> NoSQL document database using HTTP, JSON, and MapReduce </td>
+			<td>database,http,network-client,  network-server, cloud, content, big-data  </td>
+			<td> Java</td>
+			<td twitter-handle="@CouchDB"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 91.<a href=" http://crunch.apache.org">Apache Crunch </a> </td>
+			<td> Provides a framework for writing, testing, and running MapReduce pipelines </td>
+			<td> big-data, library  </td>
+			<td> Java, Scala</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 92.<a href="http://ctakes.apache.org/">Apache cTAKES  </a> </td>
+			<td> Apache clinical Text Analysis and Knowledge Extraction System (cTAKES) is an open-source natural language processing system for information extraction from electronic medical record clinical free-text </td>
+			<td> content, library  </td>
+			<td> Java, Scala</td>
+			<td twitter-handle="@apachectakes"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 93.<a href=" http://curator.apache.org/">Apache Curator </a> </td>
+			<td> A set of Java libraries that make using Apache ZooKeeper much easier. </td>
+			<td> content, library  </td>
+			<td> Java</td>
+			<td twitter-handle="@ApacheCurator"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td> 94.<a href="http://cxf.apache.org/">Apache CXF </a> </td>
+			<td> Apache CXF: An Open Source Service Framework </td>
+			<td>  library, xml, network-client, network-server  </td>
+			<td> Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td>Daniel Kulp </td>
+		</tr>
+		
+		<tr>
+			<td> 95.<a href="http://datafu.incubator.apache.org/">Apache DataFu (Incubating) </a> </td>
+			<td> Apache DataFu is a collection of libraries for working with large-scale data in Hadoop. The project was inspired by the need for stable, well-tested libraries for data mining and statistics.</td>
+			<td>big-data </td>
+			<td>Java</td>
+			<td twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td>Matthew Hayes </td>
+		</tr>
+		
+		<tr>
+			<td>96.<a href="http://deltaspike.apache.org">Apache DeltaSpike </a> </td>
+			<td>DeltaSpike is a collection of portable Extensions for CDI Containers</td>
+			<td>JavEE</td>
+			<td>Java</td>
+			<td twitter-handle="@DeltaSpikeTeam"></td>
+			<td>Not Checked</td>
+			<td>Mark Struberg  </td>
+		</tr>
+		
+		<tr>
+			<td>97.<a href="http://devicemap.apache.org">Apache DeviceMap  </a> </td>
+			<td>Device Data Repository and classification API.</td>
+			<td>mobile</td>
+			<td>Java</td>
+			<td twitter-handle="@DeviceMap"></td>
+			<td>Not Checked</td>
+			<td>Reza Naghibi</td>
+		</tr>
+		
+		<tr>
+			<td>98.<a href="http://directory.apache.org">Apache Directory</a> </td>
+			<td>Device Data Repository and classification API.</td>
+			<td>mobile</td>
+			<td>Java</td>
+			<td twitter-handle="@ApacheDS"></td>
+			<td>Not Checked</td>
+			<td>Reza Naghibi</td>
+		</tr>
+		
+		<tr>
+			<td>99.<a href="http://distributedlog.incubator.apache.org/">Apache DistributedLog (Incubating)</a> </td>
+			<td>High-performance replicated log service</td>
+			<td>database</td>
+			<td>Java</td>
+			<td twitter-handle="@distributedlog"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td>100.<a href="http://drill.apache.org">Apache Drill </a> </td>
+			<td>A distributed SQL MPP for Hadoop and NoSQL</td>
+			<td>database</td>
+			<td>Java</td>
+			<td twitter-handle="@ApacheDrill"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td>101.<a href="http://eagle.incubator.apache.org/">Apache Eagle (Incubating)</a> </td>
+			<td>Monitoring solution for Hadoop</td>
+			<td>library</td>
+			<td>Java</td>
+			<td twitter-handle=""></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+      </tbody>	  
+	</table>
+  </body>
+ </html>
