@@ -6,7 +6,7 @@
 <!-- 1. Launch the ASF Project List URL: https://projects.apache.org/projects.html?name -->
 <!-- 2. Click on the individual Project name -->
 <!-- 3. Capture the information such as: Short Description, Category, Language, and the maintainer. -->
-<!-- 4. Launch Twitter and search for the ASF project. If the handle exits, capture the handle.
+<!-- 4. Launch Twitter and search for the ASF project. If the handle exits, capture the handle. -->
 <!-- 5. As we use CSS to highlight the ASF handle, we use CSS after selector to highlight the Twitter handle in Blue color. -->
 <!-- -->
 
@@ -20,7 +20,7 @@
    
    <style> 
 
-      .col-RowNo {
+     .col-RowNo {
 	     width:1%
 	  }
 	  
@@ -56,8 +56,8 @@
       width: 100%;
 	  word-wrap:normal;
 	  overflow-wrap:normal;
-	  font-family:"Arial Narrow", Courier;
-	  font-size:11;
+	  font-family:"Arial Narrow","Sans-serif" ;
+	  font-size:10;
 	}
 	
 	.ASFdata th {
@@ -76,35 +76,42 @@
 	  }
 
 	  .ASFdata {
-	      counter-reset: rownumber;
+	      counter-reset: data-rownumber;
 	  }
 	  
 	  .ASFdata tr > td:first-child {
-	     counter-increment: rownumber;
+	     counter-increment: data-rownumber;
 	  }
 	  
 	  .ASFdata tr td:first-child::before {
-	    content: counter(rownumber);
+	    content: counter(data-rownumber);
 	  }
 	  
 	  .ASFdata tr:nth-child(even) {
           background: lightpink;
      }
 	 
-	 td[twitter-handle="Not Available"]:after {
-	   content:attr(twitter-handle);
+	 td[data-twitter-handle="Not Available"]:after {
+	   content:attr(data-twitter-handle);
+	 }
+
+	 td[data-twitter-handle^="@"]:after {
+	   content: url("https://abs.twimg.com/errors/logo23x19.png");
 	 }
 	 
-	 
-	 td[twitter-handle^="@"]:after {
-	   content:attr(twitter-handle);
+	 td[data-twitter-handle^="@"]:hover:after {
+	   position:condensed;
+	   content: attr(data-twitter-handle);
 	   color:blue;
 	 }
 	 
+	 
    </style>
+   
  </head>
  
  <body>
+ 	
     <table id="ASFdata" class="ASFdata">
 	  <thead>
 	     <tr> 
@@ -118,7 +125,9 @@
 		   <th class="col-Maintainer"> Maintainer </th>
 		 </tr>
 	  </thead>
-	  
+
+    
+	
 	   <tfoot>
 	     <tr> 
 		   <th class="col-RowNo">#</th>
@@ -134,355 +143,355 @@
 	  
       <tbody>
 	      <tr>
-		    <td rownumber=""></td>
-		    <td><a href="http://ant.apache.org/antlibs/dotnet/"> Apache .NET Ant Library </a> </td>
+		    <td data-rownumber=""></td>
+		    <td><a href="http://ant.apache.org/antlibs/dotnet/" target="_blank"> Apache .NET Ant Library </a> </td>
 			<td>Support for Mono and Microsoft .NET development using Ant </td>
 			<td>build-management</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td> Not Checked </td> 
 			<td> </td>
 		  </tr>
 		  
 		   <tr>
-		   <td rownumber=""></td>
-		    <td><a href="http://abdera.apache.org">  Apache Abdera </a> </td>
+		   <td data-rownumber=""></td>
+		    <td><a href="http://abdera.apache.org" target="_blank">  Apache Abdera </a> </td>
 			<td> An open source Atom implementation</td>
 			<td>xml</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td> Not Checked </td> 
 			<td> </td>
 		  </tr>
 		
 		   <tr>
-		   <td rownumber=""></td>
-		    <td><a href=" https://accumulo.apache.org">   Apache Accumulo </a> </td>
+		   <td data-rownumber=""></td>
+		    <td><a href=" https://accumulo.apache.org" target="_blank">   Apache Accumulo </a> </td>
 			<td>The Apache Accumulo sorted, distributed key/value store is based on Google's BigTable design.</td>
 			<td>database</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheAccumulo"></td>
+			<td data-twitter-handle="@ApacheAccumulo"></td>
 			<td> Not Checked </td> 
 			<td>Billie Rinaldi</td>
 		  </tr>
 		  
 		  
 		  <tr>
-		  <td rownumber=""></td>
-			<td><a href="http://ace.apache.org/"> Apache Ace </a> </td>
+		  <td data-rownumber=""></td>
+			<td><a href="http://ace.apache.org/" target="_blank"> Apache Ace </a> </td>
 			<td>Apache Ace is a distribution framework that allows you to centrally manage and distribute software components, configuration data and other artifacts to target systems. </td>
 			<td>osgi</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td><a href="mailto:dev@ace.apache.org">dev@ace.apache.org</a></td>
 		</tr>
 		
 		<tr>
-		<td rownumber=""></td>
-			<td><a href="http://activemq.apache.org/"> Apache Activemq </a> </td>
+		<td data-rownumber=""></td>
+			<td><a href="http://activemq.apache.org/" target="_blank"> Apache Activemq </a> </td>
 			<td>Activemq is the most popular and powerful open source message broker.</td>
 			<td>network-server, network-client</td>
 			<td>Java, c, c++, ruby</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td>Hiram R. Chirino </td>
 		</tr>
 		
 		<tr>
-		    <td rownumber=""></td>
-			<td><a href="http://airavata.apache.org/"> Apache Airavata </a> </td>
+		    <td data-rownumber=""></td>
+			<td><a href="http://airavata.apache.org/" target="_blank"> Apache Airavata </a> </td>
 			<td >Apache Airavata is a distributed system software framework to manage simple to composite applications with complex execution and workflow patterns on diverse computational resources</td>
-			<td >network-server, cloud, big data</td>
+			<td> network-server, cloud, big data</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td>suresh marru </td>
 		</tr>
 		
 		<tr>
-		    <td rownumber=""></td>
-  		    <td><a href="http://airflow.incubator.apache.org/">Apache Airflow (incubating)</a> </td>
+		    <td data-rownumber=""></td>
+  		    <td><a href="http://airflow.incubator.apache.org/" target="_blank">Apache Airflow (incubating)</a> </td>
 			<td> Airflow is a workflow automation and scheduling system that can be used to author and manage data pipelines.</td>
 			<td>python</td>
 			<td></td>
-			<td twitter-handle="@ApacheAirflow"></td>
+			<td data-twitter-handle="@ApacheAirflow"></td>
 			<td>Not Checked</td>
 			<td><br></td>
 		</tr>
 		
 		<tr>
-		<td rownumber=""></td>
-			<td><a href="http://allura.apache.org/"> Apache Allura </a> </td>
-			<td >Forge software for hosting software projects</td>
+		<td data-rownumber=""></td>
+			<td><a href="http://allura.apache.org/" target="_blank"> Apache Allura </a> </td>
+			<td>Forge software for hosting software projects</td>
 			<td>content</td>
 			<td>python</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td><br></td>
 		</tr>
 		<tr>
-			<td rownumber=""></td>
-			<td><a href="http://ambari.apache.org/"> Apache Ambari </a> </td>
-			<td >Apache ambari makes hadoop cluster provisioning, managing, and monitoring dead simple.</td>
+			<td data-rownumber=""></td>
+			<td><a href="http://ambari.apache.org/" target="_blank"> Apache Ambari </a> </td>
+			<td>Apache ambari makes hadoop cluster provisioning, managing, and monitoring dead simple.</td>
 			<td>big-data</td>
 			<td>Java, python, Javascript</td>
-			<td twitter-handle="@ApacheAmbari"></td>
+			<td data-twitter-handle="@ApacheAmbari"></td>
 			<td>Not Checked</td>
 			<td>yusaku sako </td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
-			<td><a href="http://velocity.apache.org/anakia/"> Apache Anakia</a></td>
+			<td data-rownumber=""></td>
+			<td><a href="http://velocity.apache.org/anakia/" target="_blank"> Apache Anakia</a></td>
 			<td >Anakia uses apache velocity to generate documents based on xml source files</td>
 			<td>library</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td><br></td>
 		</tr>
 		
 		<tr>
-		    <td rownumber=""></td>
-			<td><a href="http://annotator.incubator.apache.org/"> Apache Annotator (incubating) </a> </td>
+		    <td data-rownumber=""></td>
+			<td><a href="http://annotator.incubator.apache.org/" target="_blank"> Apache Annotator (incubating) </a> </td>
 			<td >Annotator provides annotation enabling code for browsers, servers, and humans.</td>
 			<td></td>
 			<td></td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 
         <tr>
-			<td rownumber=""></td>
-			<td><a href="http://ant.apache.org"> Apache Ant </a> </td>
-			<td >Apache Ant is a Java-based build tool.</td>
+			<td data-rownumber=""></td>
+			<td><a href="http://ant.apache.org" target="_blank"> Apache Ant </a> </td>
+			<td>Apache Ant is a Java-based build tool.</td>
 			<td>build-management</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 
 		
 		<tr>
-			<td rownumber=""></td>
-			<td><a href="http://ant.apache.org/antlibs/antunit/"> Apache AntUnit </a> </td>
+			<td data-rownumber=""></td>
+			<td><a href="http://ant.apache.org/antlibs/antunit/" target="_blank"> Apache AntUnit </a> </td>
 			<td>Test-Framework for Testing Ant Tasks and Types</td>
 			<td>build-management, testing</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
-			<td><a href="http://any23.apache.org"> Apache Any23  </a> </td>
+			<td data-rownumber=""></td>
+			<td><a href="http://any23.apache.org" target="_blank"> Apache Any23  </a> </td>
 			<td>Anything To Triples (Any23) is a library, a web service and a command line tool that extracts structured data in RDF format from a variety of Web documents.</td>
 			<td>content</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td><a href="mailto:any23@any23.apache.org">Apache Any23 Development Team </a></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
-			<td><a href="http://apex.apache.org"> Apache Apex  </a> </td>
+			<td data-rownumber=""></td>
+			<td><a href="http://apex.apache.org" target="_blank"> Apache Apex  </a> </td>
 			<td> Enterprise-grade unified stream and batch processing engine.</td>
 			<td>content</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheApex"></td>
+			<td data-twitter-handle="@ApacheApex"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
-			<td><a href=" http://archiva.apache.org"> Apache Archiva  </a> </td>
+			<td data-rownumber=""></td>
+			<td><a href=" http://archiva.apache.org" target="_blank"> Apache Archiva  </a> </td>
 			<td> Apache Archiva software is an extensible repository management tool that helps taking care of your own personal or enterprise-wide build artifact repository.</td>
 			<td>build-management</td>
 			<td>Java</td>
-			<td twitter-handle="@Archiva"></td>
+			<td data-twitter-handle="@Archiva"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
-			<td><a href="http://ariatosca.incubator.apache.org/"> Apache AriaTosca (Incubating)   </a> </td>
+			<td data-rownumber=""></td>
+			<td><a href="http://ariatosca.incubator.apache.org/" target="_blank"> Apache AriaTosca (Incubating)   </a> </td>
 			<td> Apache Archiva software is an extensible repository management tool that helps taking care of your own personal or enterprise-wide build artifact repository.</td>
 			<td>repository-management</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
-			<td><a href=" https://aries.apache.org/"> Apache Aries  </a> </td>
+			<td data-rownumber=""></td>
+			<td><a href=" https://aries.apache.org/" target="_blank"> Apache Aries  </a> </td>
 			<td> OSGi Enterprise Programming Model </td>
 			<td>library</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td> Kevan Lee Miller</td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
-			<td><a href="http://arrow.apache.org/"> Apache Arrow   </a> </td>
+			<td data-rownumber=""></td>
+			<td><a href="http://arrow.apache.org/" target="_blank"> Apache Arrow   </a> </td>
 			<td> Powering Columnar In-Memory Analytics</td>
 			<td>Analytics</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheArrow"></td>
+			<td data-twitter-handle="@ApacheArrow"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
-			<td><a href="http://asterixdb.apache.org/"> Apache AsterixDB  </a> </td>
+			<td data-rownumber=""></td>
+			<td><a href="http://asterixdb.apache.org/" target="_blank"> Apache AsterixDB  </a> </td>
 			<td> open source Big Data Management System </td>
 			<td>database</td>
 			<td>Java</td>
-			<td twitter-handle="@AsterixDB"></td>
+			<td data-twitter-handle="@AsterixDB"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
-			<td><a href="http://atlas.incubator.apache.org/"> Apache Atlas (Incubating) </a> </td>
+			<td data-rownumber=""></td>
+			<td><a href="http://atlas.incubator.apache.org/" target="_blank"> Apache Atlas (Incubating) </a> </td>
 			<td> A scalable and extensible set of core foundational governance services enabling enterprises meet their compliance requirements within Hadoop </td>
 			<td>data-governance</td>
 			<td>Python</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-		    <td rownumber=""></td>
+		    <td data-rownumber=""></td>
 			<td><a href="http://aurora.apache.org/"> Apache Aurora  </a> </td>
 			<td> Apache Avro is a data serialization system. </td>
 			<td>library, big-data  </td>
 			<td>C, C++,  C#,  Java,  PHP,  Python,  Ruby </td>
-			<td twitter-handle="@ApacheAuroa"></td>
+			<td data-twitter-handle="@ApacheAuroa"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-		    <td rownumber=""></td>
+		    <td data-rownumber=""></td>
 			<td><a href="http://ws.apache.org/axiom/"> Apache Axiom </a> </td>
 			<td> Apache Axiom is an XML object model supporting deferred parsing </td>
 			<td>library, xml </td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://axis.apache.org/axis2/java/core"> Apache Axis2 </a> </td>
 			<td> Apache Axis2 is a service hosting and consumption framework that makes it easy to use SOAP and Web Services </td>
 			<td>xml,http,network-server,network-client   </td>
 			<td>Java,C</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-		    <td rownumber=""></td>
+		    <td data-rownumber=""></td>
 			<td><a href="http://bahir.apache.org/"> Apache Bahir </a> </td>
 			<td> Extensions to distributed analytic platforms such as Apache Spark</td>
 			<td>big-data</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheBahir"></td>
+			<td data-twitter-handle="@ApacheBahir"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		
 		<tr>
-		    <td rownumber=""></td>
+		    <td data-rownumber=""></td>
 			<td><a href="http://bahir.apache.org/"> Apache BatchEE (Incubating) </a> </td>
 			<td> BatchEE projects aims to provide a JBatch implementation (aka JSR352) and a set of useful extensions for this specification.</td>
 			<td>library</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-		    <td rownumber=""></td>
+		    <td data-rownumber=""></td>
 			<td><a href="http://xmlgraphics.apache.org/batik/"> Apache Batik  </a> </td>
 			<td> The Apache Foundation's Java-based toolkit for SVG generation and manipulation.</td>
 			<td>graphics, xml</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-		    <td rownumber=""></td>
+		    <td data-rownumber=""></td>
 			<td><a href="http://beam.incubator.apache.org/"> Apache Beam (Incubating)   </a> </td>
 			<td> Unified model and set of language-specific SDKs for defining and executing data processing workflows</td>
 			<td>library</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheBeam"></td>
+			<td data-twitter-handle="@ApacheBeam"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-		    <td rownumber=""></td>
+		    <td data-rownumber=""></td>
 			<td><a href="http://bigtop.apache.org/"> Apache Bigtop  </a> </td>
 			<td> A 100% community-driven Bigdata management platform.</td>
 			<td>big-data</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-		    <td rownumber=""></td>
+		    <td data-rownumber=""></td>
 			<td><a href="http://bigtop.apache.org/"> Apache Bloodhound  </a> </td>
 			<td>  Apache Bloodhound is a software development collaboration tool, including issue tracking, wiki and repository browsing. </td>
 			<td>build-management</td>
 			<td>Python</td>
-			<td twitter-handle="@apbloodhound"></td>
+			<td data-twitter-handle="@apbloodhound"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-		    <td rownumber=""></td>
+		    <td data-rownumber=""></td>
 			<td><a href="http://blur.incubator.apache.org/"> Apache Blur (Incubating) </a> </td>
 			<td>  Blur is a search platform capable of searching massive amounts of data in a cloud computing environment. </td>
 			<td></td>
 			<td></td>
-			<td twitter-handle="@ApacheBlur"></td>
+			<td data-twitter-handle="@ApacheBlur"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-		    <td rownumber=""></td>
+		    <td data-rownumber=""></td>
 			<td><a href="http://bookkeeper.apache.org/"> Apache BookKeeper </a> </td>
 			<td>A reliable replicated log service. </td>
 			<td>big-data </td>
 			<td>Java</td>
-			<td twitter-handle="@asfbookkeeper"></td>
+			<td data-twitter-handle="@asfbookkeeper"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
@@ -490,1677 +499,2207 @@
 		
 		
 		<tr>
-		    <td rownumber=""></td>
+		    <td data-rownumber=""></td>
 			<td><a href="http://brooklyn.apache.org"> Apache Brooklyn  </a> </td>
 			<td>Apache Brooklyn is a framework for modeling, monitoring, and managing applications through autonomic blueprints.</td>
 			<td>cloud</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheBrooklyn"></td>
+			<td data-twitter-handle="@ApacheBrooklyn"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 	
     	<tr>
-		    <td rownumber=""></td>
+		    <td data-rownumber=""></td>
 			<td><a href=" http://buildr.apache.org"> Apache Buildr   </a> </td>
 			<td>Apache Buildr is a build system for Java-based applications, including support for Scala, Groovy and a growing number of JVM languages and tool</td>
 			<td>build-management</td>
 			<td>Java</td>
-			<td twitter-handle="@buildr"></td>
+			<td data-twitter-handle="@buildr"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 	
 	
 	    <tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://bval.apache.org/"> Apache BVal </a> </td>
 			<td>Bean Validation API Implementation</td>
 			<td>javaee, library</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="https://calcite.apache.org"> Apache Calcite  </a> </td>
 			<td>A dynamic data management framework.</td>
 			<td>big-data   hadoop   sql  </td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheCalcite"></td>
+			<td data-twitter-handle="@ApacheCalcite"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://camel.apache.org/"> Apache Camel </a> </td>
 			<td>Apache Camel is a powerful open source integration framework based on known Enterprise Integration Patterns.</td>
 			<td>osgi   network-server   network-client  </td>
 			<td>Java  XML  Python  Groovy  JavaScript  Ruby  SQL  Scala  PHP </td>
-			<td twitter-handle="@cameltweet"></td>
+			<td data-twitter-handle="@cameltweet"></td>
 			<td>Not Checked</td>
 			<td>Christian Mueller </td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://carbondata.incubator.apache.org/"> Apache CarbonData (Incubating) </a> </td>
 			<td> Apache Hadoop native file format for faster interactive query using advanced columnar storage, index, compression and encoding techniques to improve computing efficiency, in turn it will help speedup queries an order of magnitude faster over PetaBytes of data</td>
 			<td>big-data</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://cassandra.apache.org"> Apache Cassandra  </a> </td>
 			<td> The Apache Cassandra database is the right choice when you need scalability and high availability without compromising performance</td>
 			<td>database</td>
 			<td>Java</td>
-			<td twitter-handle="@cassandra"></td>
+			<td data-twitter-handle="@cassandra"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://cayenne.apache.org"> Apache Cayenne   </a> </td>
 			<td> User-friendly Java ORM with tools</td>
 			<td>database,library, network-server, network-client, xml, web-framework  </td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheCayenne"></td>
+			<td data-twitter-handle="@ApacheCayenne"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://celix.apache.org"> Apache Celix </a> </td>
 			<td> OSGi framework implementation in C.</td>
 			<td>network-server</td>
 			<td>C</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://logging.apache.org/log4j/docs/chainsaw.html"> Apache Chainsaw </a> </td>
 			<td>Apache Chainsaw is a GUI log viewer</td>
 			<td>logger</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://chemistry.apache.org">Apache Chemistry </a> </td>
 			<td>Apache Chemistry provides open source implementations of the Content Management Interoperability Services (CMIS) specification.</td>
 			<td>content-management</td>
 			<td>Java,Python, PHP, C#,  Objective-C </td>
-			<td twitter-handle="@apachechemistry"></td>
+			<td data-twitter-handle="@apachechemistry"></td>
 			<td>Not Checked</td>
 			<td>Florian Müller</td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href=" http://chukwa.apache.org/">Apache Chukwa </a> </td>
 			<td> Chukwa is an open source data collection system for monitoring large distributed systems.</td>
 			<td>hadoop</td>
 			<td>Java, JavaScript </td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://clerezza.apache.org">Apache Clerezza </a> </td>
 			<td> Clerezza is a service platform which provides a set of functionality for management of semantically linked data accessible through RESTful Web Services and in a secured way</td>
 			<td>osgi,content  </td>
 			<td>Java  Scala</td>
-			<td twitter-handle="@clerezza"></td>
+			<td data-twitter-handle="@clerezza"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://cmda.incubator.apache.org/">Apache Climate Model Diagnostic Analyzer (Incubating) </a> </td>
 			<td> CMDA provides web services for multi-aspect physics-based and phenomenon-oriented climate model performance evaluation and diagnosis through the comprehensive and synergistic use of multiple observational data, reanalysis data, and model outputs. </td>
 			<td></td>
 			<td></td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://cloudstack.apache.org">Apache CloudStack </a> </td>
 			<td> Apache CloudStack is an IaaS (“Infrastracture as a Service”) cloud orchestration platform.</td>
 			<td>cloud</td>
 			<td>Java,Python </td>
-			<td twitter-handle="@CloudStack"></td>
+			<td data-twitter-handle="@CloudStack"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://cocoon.apache.org/">Apache Cocoon  </a> </td>
 			<td> Web development framework: separation of concerns, component-based. </td>
 			<td>database,graphics,http,network-client,network-server,web-framework,xml </td>
 			<td> Java, XML </td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://commons.apache.org/bcel/">Apache Commons BCEL </a> </td>
 			<td> Bytecode Engineering Library </td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="https://commons.apache.org/proper/beanutils/">Apache Commons BeanUtils </a> </td>
 			<td>  Commons BeanUtils</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://commons.apache.org/bsf/">Apache Commons BSF </a> </td>
 			<td>Framework that provides scripting language support within Java applications</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/chain/">Apache Commons Chain </a> </td>
 			<td>An implmentation of the GoF Chain of Responsibility pattern</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://commons.apache.org/cli/">Apache Commons CLI  </a> </td>
 			<td>Commons CLI provides a simple API for presenting, proecessing and validating a command line interface.</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://commons.apache.org/codec/">Apache Commons Codec </a> </td>
 			<td>Simple encoders and decoders</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-		    <td rownumber=""></td>
+		    <td data-rownumber=""></td>
 			<td><a href="http://commons.apache.org/collections/">Apache Commons Collections  </a> </td>
 			<td>Commons Collections</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://commons.apache.org/compress/">Apache Commons Compress </a> </td>
 			<td>Commons Compress</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/configuration/">Apache Commons Configuration </a> </td>
 			<td>Common Configuration</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/daemon/">Apache Commons Daemon </a> </td>
 			<td>Commons Daemon</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/dbcp/">Apache Commons DBCP  </a> </td>
 			<td>Commons Database Connection Pooling</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/dbutils/">Apache Commons DbUtils </a> </td>
 			<td>A package of Java utility classes for easing JDBC development</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/digester/">Apache Commons Digester  </a> </td>
 			<td> Rule based XML->Java object mapping module</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/discovery/">Apache Commons Discovery   </a> </td>
 			<td> Commons Discovery</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		
 		<tr>
-		    <td rownumber=""></td>
+		    <td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/discovery/">Apache Commons EL </a> </td>
 			<td>Commons EL</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/email/">Apache Commons Email  </a> </td>
 			<td>Commons Email</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/exec/">Apache Commons Exec</a> </td>
 			<td>A library to reliably execute external processes from within the JVM</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/fileupload/">Apache Commons FileUpload </a> </td>
 			<td> File upload component for Java servlets</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/functor/">Apache Commons Functor  </a> </td>
 			<td> Commons Functor</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href=" http://hc.apache.org/httpclient-3.x/">Apache Commons HttpClient </a> </td>
 			<td> Client-side HTTP implementation in Java.</td>
 			<td>http   library   network-client  </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/io/">Apache Commons IO </a> </td>
 			<td> Commons IO</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/jci/">Apache Commons JCI </a> </td>
 			<td> Commons JCI</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/proper/commons-jcs/">Apache Commons JCS  </a> </td>
 			<td> Java Caching System</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/jexl/">Apache Commons JEXL</a> </td>
 			<td>Apache Commons JEXL Expression Language Engine</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		
 		<tr>
-		    <td rownumber=""></td>
+		    <td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/jxpath/">Apache Commons JXPath </a> </td>
 			<td> XPath for Java Objects</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/lang/">Apache Commons Lang </a> </td>
 			<td> Java Common Components</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/launcher/">Apache Commons Launcher  </a> </td>
 			<td> Commons Launcher</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/logging/">Apache Commons Logging </a> </td>
 			<td> Commons Logging</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/math/">Apache Commons Math </a> </td>
 			<td> Apache Commons Math</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/modeler/">Apache Commons Modeler </a> </td>
 			<td> Commons Modeler</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/net/">Apache Commons Net </a> </td>
 			<td> Apache Commons Net</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/proper/commons-ognl/">Apache Commons OGNL </a> </td>
 			<td> Object Graph Navigation Library</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/pool/">Apache Commons Pool  </a> </td>
 			<td> Commons Object Pooling Library</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/proxy/">Apache Commons Proxy</a> </td>
 			<td> Commons Dynamic Proxy Library</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/scxml/">Apache Commons SCXML </a> </td>
 			<td> A Java implementation of State Chart XML</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/validator/">Apache Commons Validator </a> </td>
 			<td> Validation Framework and Routines</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/vfs/">Apache Commons VFS </a> </td>
 			<td> Commons VFS</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://commons.apache.org/weaver/">Apache Commons Weaver </a> </td>
 			<td> Java Common Components</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://community.apache.org/">Apache Community Development  </a> </td>
 			<td> Resources to help people become involved with Apache projects</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://ant.apache.org/antlibs/compress/">Apache Compress Ant Library </a> </td>
 			<td> Provides Support for Some Archive Formats not Supported by Ant's Core</td>
 			<td>library </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://cordova.apache.org">Apache Cordova  </a> </td>
 			<td> A platform for building native mobile applications using HTML, CSS and JavaScript. </td>
 			<td>library, mobile</td>
 			<td> Java</td>
-			<td twitter-handle="@apachecordova"></td>
+			<td data-twitter-handle="@apachecordova"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://couchdb.apache.org/">Apache CouchDB   </a> </td>
 			<td> NoSQL document database using HTTP, JSON, and MapReduce </td>
 			<td>database,http,network-client,  network-server, cloud, content, big-data  </td>
 			<td> Java</td>
-			<td twitter-handle="@CouchDB"></td>
+			<td data-twitter-handle="@CouchDB"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href=" http://crunch.apache.org">Apache Crunch </a> </td>
 			<td> Provides a framework for writing, testing, and running MapReduce pipelines </td>
 			<td> big-data, library  </td>
 			<td> Java, Scala</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://ctakes.apache.org/">Apache cTAKES  </a> </td>
 			<td> Apache clinical Text Analysis and Knowledge Extraction System (cTAKES) is an open-source natural language processing system for information extraction from electronic medical record clinical free-text </td>
 			<td> content, library  </td>
 			<td> Java, Scala</td>
-			<td twitter-handle="@apachectakes"></td>
+			<td data-twitter-handle="@apachectakes"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href=" http://curator.apache.org/">Apache Curator </a> </td>
 			<td> A set of Java libraries that make using Apache ZooKeeper much easier. </td>
 			<td> content, library  </td>
 			<td> Java</td>
-			<td twitter-handle="@ApacheCurator"></td>
+			<td data-twitter-handle="@ApacheCurator"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://cxf.apache.org/">Apache CXF </a> </td>
 			<td> Apache CXF: An Open Source Service Framework </td>
 			<td>  library, xml, network-client, network-server  </td>
 			<td> Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td>Daniel Kulp </td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td> <a href="http://datafu.incubator.apache.org/">Apache DataFu (Incubating) </a> </td>
 			<td> Apache DataFu is a collection of libraries for working with large-scale data in Hadoop. The project was inspired by the need for stable, well-tested libraries for data mining and statistics.</td>
 			<td>big-data </td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td>Matthew Hayes </td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://deltaspike.apache.org">Apache DeltaSpike </a> </td>
 			<td>DeltaSpike is a collection of portable Extensions for CDI Containers</td>
 			<td>JavEE</td>
 			<td>Java</td>
-			<td twitter-handle="@DeltaSpikeTeam"></td>
+			<td data-twitter-handle="@DeltaSpikeTeam"></td>
 			<td>Not Checked</td>
 			<td>Mark Struberg  </td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://devicemap.apache.org">Apache DeviceMap  </a> </td>
 			<td>Device Data Repository and classification API.</td>
 			<td>mobile</td>
 			<td>Java</td>
-			<td twitter-handle="@DeviceMap"></td>
+			<td data-twitter-handle="@DeviceMap"></td>
 			<td>Not Checked</td>
 			<td>Reza Naghibi</td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://directory.apache.org">Apache Directory</a> </td>
 			<td>Device Data Repository and classification API.</td>
 			<td>mobile</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheDS"></td>
+			<td data-twitter-handle="@ApacheDS"></td>
 			<td>Not Checked</td>
 			<td>Reza Naghibi</td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://distributedlog.incubator.apache.org/">Apache DistributedLog (Incubating)</a> </td>
 			<td>High-performance replicated log service</td>
 			<td>database</td>
 			<td>Java</td>
-			<td twitter-handle="@distributedlog"></td>
+			<td data-twitter-handle="@distributedlog"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://drill.apache.org">Apache Drill </a> </td>
 			<td>A distributed SQL MPP for Hadoop and NoSQL</td>
 			<td>database</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheDrill"></td>
+			<td data-twitter-handle="@ApacheDrill"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://eagle.incubator.apache.org/">Apache Eagle (Incubating)</a> </td>
 			<td>Monitoring solution for Hadoop</td>
 			<td>library</td>
 			<td>Java</td>
-			<td twitter-handle=""></td>
+			<td data-twitter-handle=""></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://edgent.incubator.apache.org/">Apache Edgent (Incubating) </a> </td>
 			<td>Apache Edgent is a stream processing programming model and lightweight micro-kernel style runtime to execute analytics at devices on the edge or at the gateway.</td>
 			<td>big-data,library,mobile,network-client</td>
 			<td>Java, JavaScript</td>
-			<td twitter-handle="@ApacheEdgent"></td>
+			<td data-twitter-handle="@ApacheEdgent"></td>
 			<td>Not Checked</td>
 			<td>Daniel John Debrunner</td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://empire-db.apache.org">Apache Empire-db</a> </td>
 			<td> Apache Empire-db is a lightweight relational database abstraction layer and data persistence component</td>
 			<td>big-data</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td>Rainer Döbele </td>
 		</tr>
 		
 		<tr>
-		    <td rownumber=""></td>
-			<td><a href=" http://falcon.apache.org">Data management and processing platform</a> </td>
+		    <td data-rownumber=""></td>
+			<td><a href=" http://falcon.apache.org">Apache Falcon</a> </td>
 			<td> Data management and processing platform</td>
 			<td>big-data</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheFalcon"></td>
+			<td data-twitter-handle="@ApacheFalcon"></td>
 			<td>Not Checked</td>
 			<td>Srikanth Sundarrajan</td>
 		</tr>
 		
 		<tr>
-		    <td rownumber=""></td>
+		    <td data-rownumber=""></td>
 			<td><a href="http://felix.apache.org">Apache Felix </a> </td>
 			<td> Data management and processing platform</td>
 			<td>network-server</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-		    <td rownumber=""></td>
+		    <td data-rownumber=""></td>
 			<td><a href="http://fineract.incubator.apache.org/">Apache Fineract (Incubating) </a> </td>
 			<td> Fineract is an open source system for core banking as a platform.</td>
 			<td>banking</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheFineract"></td>
+			<td data-twitter-handle="@ApacheFineract"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://fineract.incubator.apache.org/">Apache Flex </a> </td>
 			<td>  Apache Flex® is a highly productive, open source application framework for building and maintaining expressive web applications that deploy consistently on all major browsers, desktops and devices (including smartphones, tablets and tv).</td>
 			<td> web-framework  </td>
 			<td>ActionScript</td>
-			<td twitter-handle="@ApacheFlex"></td>
+			<td data-twitter-handle="@ApacheFlex"></td>
 			<td>Not Checked</td>
 			<td>Alex Harui </td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://flink.apache.org">Apache Flink  </a> </td>
 			<td>Fast and reliable large-scale data processing</td>
 			<td>big-data</td>
 			<td>Java, Scala</td>
-			<td twitter-handle="@ApacheFlink"></td>
+			<td data-twitter-handle="@ApacheFlink"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://flume.apache.org">Apache Flume</a> </td>
 			<td>Distributed, reliable, and available system for efficiently collecting, aggregating and moving large amounts of log data from many different sources to a centralized data store.</td>
 			<td>big-data</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://fluo.incubator.apache.org/">Apache Flume</a> </td>
 			<td>Fluo is a distributed system for incrementally processing large data sets stored in Accumulo.</td>
 			<td>big-data</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheFluo"></td>
+			<td data-twitter-handle="@ApacheFluo"></td>
 			<td>Not Checked</td>
 			<td>Billie Rinaldi</td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://xmlgraphics.apache.org/fop">Apache FOP </a> </td>
 			<td>The Apache Foundation's XSL Formatting Objects (XSL-FO) implementation</td>
 			<td>xml, graphics</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://forrest.apache.org/">Apache Forrest</a> </td>
 			<td>Aggregated multi-channel documentation framework, separation of concerns.</td>
 			<td>build-management</td>
 			<td>Java, XML</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://forrest.apache.org/">Apache Fortress </a> </td>
 			<td> Identity Access Management SDK</td>
 			<td>identity-management</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 	
    	    <tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://freemarker.incubator.apache.org/">Apache FreeMarker (Incubating) </a> </td>
 			<td> A generic tool to generate text output based on templates. </td>
 			<td>library</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 	
 	    <tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://mina.apache.org/ftpserver-project">Apache FtpServer</a> </td>
 			<td> The Apache FtpServer application is a 100% pure Java FTP server</td>
 			<td>network-server</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://gearpump.incubator.apache.org/">Apache Gearpump (Incubating)</a> </td>
 			<td>Lightweight real-time streaming engine built on top of Akka.</td>
 			<td></td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheGearpump"></td>
+			<td data-twitter-handle="@ApacheGearpump"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://geode.apache.org/">Apache Geode </a> </td>
 			<td>Low latency, high concurrency data management solutions</td>
 			<td>big-data</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheGeode"></td>
+			<td data-twitter-handle="@ApacheGeode"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://geronimo.apache.org">Apache Geronimo</a> </td>
 			<td>Java EE Application Server</td>
 			<td>web-framework</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheGeode"></td>
+			<td data-twitter-handle="@ApacheGeode"></td>
 			<td>Not Checked</td>
 			<td>Donald Woods </td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://giraph.apache.org">Apache Giraph </a> </td>
 			<td>Apache Giraph is an iterative graph processing system built for high scalability.</td>
 			<td>big-data</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 	
         <tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://gora.apache.org">Apache Gora </a> </td>
 			<td>Provides an in-memory data model and persistence for big data</td>
 			<td>big-data</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheGora"></td>
+			<td data-twitter-handle="@ApacheGora"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 	
 	    <tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://gossip.incubator.apache.org/">Apache Gossip (Incubating) </a> </td>
 			<td>Gossip is an implementation of the Gossip Protocol.</td>
 			<td>network-server</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td>P. Taylor Goetz</td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://griffin.incubator.apache.org/">Apache Griffin (Incubating)</a> </td>
 			<td>Data Quality solution for distributed data systems at any scale in both streaming or batch data context</td>
 			<td>big-data</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://groovy.apache.org">Apache Groovy </a> </td>
 			<td>A multi-faceted language for the Java platform</td>
 			<td>language</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheGroovy"></td>
+			<td data-twitter-handle="@ApacheGroovy"></td>
 			<td>Not Checked</td>
 			<td><a href="mailto:dev@groovy.apache.org"> Groovy Team </a></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://guacamole.incubator.apache.org/">Apache Guacamole (Incubating) </a> </td>
 			<td>An enterprise-grade, protocol-agnostic, remote desktop gateway</td>
 			<td>libraries</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://gump.apache.org/">Apache Gump</a> </td>
 			<td>Large scale continuous integration for various open source projects</td>
 			<td>build-management, testing</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 	    <tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://hadoop.apache.org/">Apache Hadoop</a> </td>
 			<td>A distributed computing platform.</td>
 			<td>database</td>
 			<td>Java</td>
-			<td twitter-handle="@hadoop"></td>
+			<td data-twitter-handle="@hadoop"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 	
 	    <tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://hama.apache.org">Apache Hama </a> </td>
 			<td> Hama is an efficient and scalable general-purpose BSP computing engine.</td>
 			<td>big-data</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheHama"></td>
+			<td data-twitter-handle="@ApacheHama"></td>
 			<td>Not Checked</td>
 			<td>Edward J. Yoon</td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://hawq.incubator.apache.org/">Apache HAWQ (Incubating)</a> </td>
 			<td>  Advanced enterprise SQL on Hadoop analytic engine built around a robust and high-performance massively-parallel processing (MPP) SQL framework evolved from Pivotal Greenplum Database.</td>
 			<td>big-data</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheHAWQ"></td>
+			<td data-twitter-handle="@ApacheHAWQ"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-		    <td rownumber=""></td>
+		    <td data-rownumber=""></td>
 			<td><a href="http://hbase.apache.org">Apache HBase </a> </td>
 			<td>Apache HBase software is the Hadoop database. Think of it as a distributed, scalable, big data store.</td>
 			<td>database</td>
 			<td>Java</td>
-			<td twitter-handle="@HBase"></td>
+			<td data-twitter-handle="@HBase"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://helix.apache.org">Apache Helix </a> </td>
 			<td>A cluster management framework for partitioned and replicated distributed resources</td>
 			<td>cloud, big-data</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheHelix"></td>
+			<td data-twitter-handle="@ApacheHelix"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://hive.apache.org">Apache Hive </a> </td>
 			<td>The Apache Hive (TM) data warehouse software facilitates querying and managing large datasets residing in distributed storage.</td>
 			<td>database</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheHive"></td>
+			<td data-twitter-handle="@ApacheHive"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://hivemall.incubator.apache.org/">Apache Hivemall (Incubating) </a> </td>
 			<td>Hivemall is a library for machine learning implemented as Hive UDFs/UDAFs/UDTFs.</td>
 			<td>libraries</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheHivemall"></td>
+			<td data-twitter-handle="@ApacheHivemall"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://horn.incubator.apache.org/">Apache HORN (Incubating)</a> </td>
 			<td>neuron-centric programming APIs and execution framework for large-scale deep learning, built on top of Apache Hama</td>
 			<td>libraries</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheHorn"></td>
+			<td data-twitter-handle="@ApacheHorn"></td>
 			<td>Not Checked</td>
 			<td>Edward J. Yoon</td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://htrace.incubator.apache.org/">Apache HTrace (Incubating) </a> </td>
 			<td>HTrace is a tracing framework intended for use with distributed systems written in java.</td>
 			<td>libraries</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://httpd.apache.org/">Apache HTTP Server </a> </td>
 			<td>The Apache HTTP Server application 'httpd'</td>
 			<td>network-server,http,httpd-module</td>
 			<td>C</td>
-			<td twitter-handle="@apache_httpd"></td>
+			<td data-twitter-handle="@apache_httpd"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://hc.apache.org/httpcomponents-client/">Apache HttpComponents Client </a> </td>
 			<td>Java library implementing an HTTP client based on HttpCore components</td>
 			<td>http,library,network-client</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://hc.apache.org/httpcomponents-core/">Apache HttpComponents Core</a> </td>
 			<td>HTTP transport library including support for asynchronous execution based on Java NIO</td>
 			<td>http,library,network-client,network-server</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 	
 	    <tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://ignite.apache.org">Apache Ignite </a> </td>
 			<td>Apache Ignite is an In-Memory Data Fabric providing in-memory data caching, partitioning, processing, and querying components.</td>
 			<td>big-data,network-server,network-client </td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheIgnite"></td>
+			<td data-twitter-handle="@ApacheIgnite"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 	
 	    <tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://impala.incubator.apache.org/">Apache Impala (Incubating)</a> </td>
 			<td>Impala is a high-performance C++ and Java SQL query engine for data stored in Apache Hadoop-based clusters.</td>
 			<td>big-data</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheImpala"></td>
+			<td data-twitter-handle="@ApacheImpala"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 	
 	    <tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://iota.incubator.apache.org/">Apache iota (Incubating) </a> </td>
 			<td>Open source system that enables the orchestration of IoT devices.</td>
 			<td>big-data</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		
 		<tr>
-		    <td rownumber=""></td>
+		    <td data-rownumber=""></td>
 			<td><a href=" http://isis.apache.org">Apache Isis</a> </td>
 			<td>Apache Isis is a framework for rapidly developing domain-driven apps in Java</td>
 			<td>web-framework</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheIsis"></td>
+			<td data-twitter-handle="@ApacheIsis"></td>
 			<td>Not Checked</td>
 			<td>Daniel Keir Haywood </td>
 		</tr>
 		
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://ant.apache.org/ivy/">Apache Ivy</a> </td>
 			<td>Powerful dependency manager oriented toward Java dependency management, even though it could be used to manage dependencies of any kind.</td>
 			<td>build-management</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://ant.apache.org/ivyde/">Apache IvyDE </a> </td>
 			<td> Integrate Ivy in Eclipse with the IvyDE plugin</td>
 			<td>build-management</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href=" http://jackrabbit.apache.org/">Apache Jackrabbit </a> </td>
 			<td>Apache Jackrabbit Content Repository</td>
 			<td>database,library,network-server, xml</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://james.apache.org">Apache JAMES</a> </td>
 			<td>100% pure Java SMTP and POP3 Mail server and NNTP News server.</td>
 			<td>mail,network-server</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheJames"></td>
+			<td data-twitter-handle="@ApacheJames"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href=" http://jclouds.apache.org">Apache jclouds </a> </td>
 			<td>The Java Multi-Cloud Toolkit</td>
 			<td>cloud, library</td>
 			<td>Java</td>
-			<td twitter-handle="@jclouds"></td>
+			<td data-twitter-handle="@jclouds"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://jena.apache.org">Apache Jena </a> </td>
 			<td>A framework for developing Semantic Web and Linked Data applications in Java.</td>
 			<td>library</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheJena"></td>
+			<td data-twitter-handle="@ApacheJena"></td>
 			<td>Not Checked</td>
 			<td>Andy Seaborne</td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://jmeter.apache.org/index.html">Apache JMeter </a> </td>
 			<td>Pure Java application for load and functional testing</td>
 			<td>testing</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheJMeter"></td>
+			<td data-twitter-handle="@ApacheJMeter"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://johnzon.apache.org/">Apache Johnzon </a> </td>
 			<td>JSR-353 compliant JSON parsing; modules to help with JSR-353 as well as JSR-374 and JSR-367</td>
 			<td>libraries</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheJohnzon"></td>
+			<td data-twitter-handle="@ApacheJohnzon"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href=" http://joshua.incubator.apache.org/">Apache Joshua (Incubating) </a> </td>
 			<td>Joshua is a statistical machine translation toolkit</td>
 			<td>libraries</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheJoshua"></td>
+			<td data-twitter-handle="@ApacheJoshua"></td>
 			<td>Not Checked</td>
 			<td>Henry Saputra</td>
 		</tr>
 		
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://jspwiki.apache.org/">Apache JSPWiki </a> </td>
 			<td>A feature-rich and extensible WikiWiki engine built around the standard J2EE components (Java, servlets, JSP)</td>
 			<td>libraries</td>
 			<td>Java</td>
-			<td twitter-handle="@jspwiki"></td>
+			<td data-twitter-handle="@jspwiki"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://juneau.incubator.apache.org/">Apache Juneau (Incubating)  </a> </td>
 			<td> Toolkit for marshalling POJOs to a wide variety of content types using a common framework</td>
 			<td>libraries</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheJuneau"></td>
+			<td data-twitter-handle="@ApacheJuneau"></td>
 			<td>Not Checked</td>
 			<td>Craig L Russell</td>
 		</tr>
 		
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://kafka.apache.org/">Apache Kafka</a> </td>
 			<td>  Is a distributed, fault tolerant, publish-subscribe messaging.</td>
 			<td>big-data</td>
 			<td>Java</td>
-			<td twitter-handle="@apachekafka"></td>
+			<td data-twitter-handle="@apachekafka"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://directory.apache.org/kerby/">Apache Kerby </a> </td>
 			<td>Is an OSGi distribution for server-side applications.</td>
 			<td>identity-management,identity-provisioning,Kerberos,Library,security,SDK</td>
 			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
+			<td data-twitter-handle="Not Available"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href=" http://knox.apache.org">Apache Knox </a> </td>
 			<td>A REST API Gateway for Hadoop Services</td>
 			<td>big-data</td>
 			<td>Java</td>
-			<td twitter-handle="@apache_knox"></td>
+			<td data-twitter-handle="@apache_knox"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://kudu.apache.org/">Apache Kudu </a> </td>
 			<td>A distributed columnar storage engine built for the Apache Hadoop ecosystem</td>
 			<td>big-data</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheKudu"></td>
+			<td data-twitter-handle="@ApacheKudu"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://kylin.apache.org/">Apache Kylin  </a> </td>
 			<td>Extreme OLAP Engine for Big Data</td>
 			<td>big-data</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheKylin"></td>
+			<td data-twitter-handle="@ApacheKylin"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://labs.apache.org/">Apache Labs </a> </td>
 			<td>A place for innovation where committers of the foundation can experiment with new ideas</td>
 			<td></td>
 			<td></td>
-			<td twitter-handle="@ApacheLabs"></td>
+			<td data-twitter-handle="@ApacheLabs"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
 		
 		<tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://lens.apache.org/">Apache Lens  </a> </td>
 			<td>Unified analytics platform</td>
 			<td></td>
 			<td></td>
-			<td twitter-handle="@ApacheLens"></td>
-			<td>Not Checked</td>
-			<td></td>
-		</tr>
-		
-		
-		<tr>
-			<td rownumber=""></td>
-			<td><a href="http://qpid.apache.org">Apache Qpid </a> </td>
-			<td>AMQP enterprise messaging implementation.</td>
-			<td>network-server,network-client</td>
-			<td>C++,Java,C#,Perl, Python, Ruby </td>
-			<td twitter-handle="Not Available"></td>
-			<td>Not Checked</td>
-			<td></td>
-		</tr>
-		
-		
-		
-		
-		 <tr>
-			<td rownumber=""></td>
-			<td><a href=" http://uima.apache.org">Apache UIMA </a> </td>
-			<td>Annotator components and a scalable integration and deployment framework for Unstructured Information analysis</td>
-			<td>library</td>
-			<td>Java, C++</td>
-			<td twitter-handle="@ApacheUIMA"></td>
-			<td>Not Checked</td>
-			<td>Marshall Schor </td>
-		</tr>
-		
-		 <tr>
-			<td rownumber=""></td>
-			<td><a href=" http://unomi.incubator.apache.org/">Apache Unomi (Incubating)  </a> </td>
-			<td>Reference implementation of the OASIS Context Server specification currently being worked on by the OASIS Context Server Technical Committee</td>
-			<td>library</td>
-			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
-			<td>Not Checked</td>
-			<td></td>
-		</tr>
-		
-		<tr>
-			<td rownumber=""></td>
-			<td><a href="http://usergrid.apache.org/">Apache Usergrid </a> </td>
-			<td>The BaaS Framework you run</td>
-			<td>library</td>
-			<td>Java</td>
-			<td twitter-handle="@usergrid"></td>
-			<td>Not Checked</td>
-			<td></td>
-		</tr>
-		
-		
-		
-		<tr>
-			<td rownumber=""></td>
-			<td><a href="http://vcl.apache.org">Apache VCL   </a> </td>
-			<td> A cloud computing platform for provisioning and brokering access to dedicated remote compute resources.</td>
-			<td>cloud </td>
-			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
-			<td>Not Checked</td>
-			<td></td>
-		</tr>
-		
-		<tr>
-			<td rownumber=""></td>
-			<td><a href="http://velocity.apache.org">Apache Velocity  </a> </td>
-			<td> Java-based template engine</td>
-			<td>library</td>
-			<td>Java</td>
-			<td twitter-handle="@Ariaapacheveloc"></td>
-			<td>Not Checked</td>
-			<td></td>
-		</tr>
-		
-		<tr>
-			<td rownumber=""></td>
-			<td><a href="http://velocity.apache.org/dvsl/devel/">Apache Velocity DVSL </a> </td>
-			<td> A tool modeled after XSLT and intended for general XML transformations using the Velocity Template Language.</td>
-			<td>library</td>
-			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
-			<td>Not Checked</td>
-			<td></td>
-		</tr>
-		
-		<tr>
-			<td rownumber=""></td>
-			<td><a href="http://velocity.apache.org/velocity/tools/">Apache Velocity Tools  </a> </td>
-			<td> Tools and infrastructure for the template engine</td>
-			<td>library</td>
-			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
-			<td>Not Checked</td>
-			<td></td>
-		</tr>
-		
-		<tr>
-			<td rownumber=""></td>
-			<td><a href="http://ant.apache.org/antlibs/proper.html">Apache VSS Ant Library  </a> </td>
-			<td> Microsoft Visual Source Safe support for Apache Ant</td>
-			<td>library</td>
-			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
-			<td>Not Checked</td>
-			<td></td>
-		</tr>
-		
-		<tr>
-			<td rownumber=""></td>
-			<td><a href=" http://vxquery.apache.org/">Apache VXQuery   </a> </td>
-			<td> Apache VXQuery implements a parallel XML Query processor.</td>
-			<td>big-data, xml</td>
-			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
-			<td>Not Checked</td>
-			<td></td>
-		</tr>
-		
-		
-		<tr>
-			<td rownumber=""></td>
-			<td><a href="http://wave.incubator.apache.org/">Apache Wave (Incubating) </a> </td>
-			<td> A wave is a hosted, live, concurrent data structure for rich communication. It can be used like email, chat, or a document.</td>
-			<td>libraries</td>
-			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
-			<td>Not Checked</td>
-			<td>Andrus Adamchik</td>
-		</tr>
-		
-		<tr>
-			<td rownumber=""></td>
-			<td><a href="http://wave.incubator.apache.org/">Apache Wave (Incubating) </a> </td>
-			<td> A wave is a hosted, live, concurrent data structure for rich communication. It can be used like email, chat, or a document.</td>
-			<td>libraries</td>
-			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
-			<td>Not Checked</td>
-			<td>Andrus Adamchik</td>
-		</tr>
-		
-		
-		<tr>
-			<td rownumber=""></td>
-			<td><a href="http://whimsy.apache.org/">Apache Whimsy  </a> </td>
-			<td> Whimsy is a site where a set of absolutely unnecessary yet often quite handy applications are deployed.</td>
-			<td>content</td>
-			<td>JavaScript</td>
-			<td twitter-handle="Not Available"></td>
-			<td>Not Checked</td>
-			<td></td>
-		</tr>
-		
-		
-		<tr>
-			<td rownumber=""></td>
-			<td><a href="http://creadur.apache.org/whisker">Apache Whisker   </a> </td>
-			<td> Apache Whisker assists assembled applications to maintain correct legal documentation.</td>
-			<td>build-management</td>
-			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
-			<td>Not Checked</td>
-			<td></td>
-		</tr>
-		
-		
-		<tr>
-			<td rownumber=""></td>
-			<td><a href=" http://wicket.apache.org">Apache Wicket</a> </td>
-			<td> Apache Wicket is an open source Java component oriented web application framework.</td>
-			<td>web-framework</td>
-			<td>Java</td>
-			<td twitter-handle="@apache_wicket"></td>
-			<td>Not Checked</td>
-			<td></td>
-		</tr>
-		
-		<tr>
-			<td rownumber=""></td>
-			<td><a href="http://wink.apache.org">Apache Wink </a> </td>
-			<td> RESTFul web services based on JAX-RS specification.</td>
-			<td>web-framework</td>
-			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
-			<td>Not Checked</td>
-			<td></td>
-		</tr>
-		
-		<tr>
-			<td rownumber=""></td>
-			<td><a href="http://ws.apache.org/woden/">Apache Woden  </a> </td>
-			<td> Subproject of the Apache Web Services to develop a Java class library for reading, manipulating, creating and writing WSDL documents.</td>
-			<td>XML</td>
-			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
-			<td>Not Checked</td>
-			<td></td>
-		</tr>
-		
-		
-		
-		
-		
-		<tr>
-			<td rownumber=""></td>
-			<td><a href="http://tcl.apache.org/websh">Apache Websh </a> </td>
-			<td> Websh is a rapid development environment for building powerful, fast, and reliable web applications in Tcl</td>
-			<td>web-framework,httpd-module </td>
-			<td>Java</td>
-			<td twitter-handle="Not Available"></td>
-			<td>Not Checked</td>
-			<td></td>
-		</tr>
-		
-		
-		
-		
-		<tr>
-			<td rownumber=""></td>
-			<td><a href="https://yetus.apache.org/">Apache Yetus  </a> </td>
-			<td> A collection of libraries and tools that enable contribution and release processes for software projects</td>
-			<td>build-management,library,testing  </td>
-			<td>Bash, Java,  Python  </td>
-			<td twitter-handle="@ApacheYetus"></td>
+			<td data-twitter-handle="@ApacheLens"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 	
 	    <tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
+			<td><a href="http://libcloud.apache.org">Apache Libcloud </a> </td>
+			<td>Apache Libcloud is a standard Python library that abstracts away differences among multiple cloud provider APIs.</td>
+			<td>cloud,library</td>
+			<td>Python</td>
+			<td data-twitter-handle="@libcloud"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://logging.apache.org/log4cxx">Apache log4cxx </a> </td>
+			<td>Apache log4cxx provides logging services for C++..</td>
+			<td>library</td>
+			<td>C++</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://log4cxx2.incubator.apache.org/">Apache log4cxx2 (Incubating)  </a> </td>
+			<td>Logging for C++. N.B. This is a reboot of the Log4cxx podling which previously graduated.</td>
+			<td>library</td>
+			<td>C++</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://logging.apache.org/log4j">Apache log4j </a> </td>
+			<td>Apache log4j provides logging services for Java.</td>
+			<td>library</td>
+			<td>Java</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://logging.apache.org/log4net/">Apache log4net </a> </td>
+			<td>Apache log4net provides logging services for .NET.</td>
+			<td>library</td>
+			<td>C#</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://logging.apache.org/log4net/">Apache log4php </a> </td>
+			<td>Apache log4php is a logging framework for PHP.</td>
+			<td>library</td>
+			<td>PHP</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://lucene.apache.org/core/">Apache Lucene Core  </a> </td>
+			<td>Apache Lucene is a high-performance, full-featured text search engine library</td>
+			<td>database,library,search</td>
+			<td>Java</td>
+			<td data-twitter-handle="@ApacheLucene"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://lucene.apache.org/core/">Apache Lucene.Net </a> </td>
+			<td>Lucene.Net is a port of the Lucene search engine library, written in C# and targeted at .NET runtime users.</td>
+			<td>database</td>
+			<td>C#</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://lucy.apache.org/">Apache Lucy </a> </td>
+			<td>The Apache Lucy search engine library provides full-text search for dynamic programming languages.</td>
+			<td>database</td>
+			<td>C,Perl,Ruby,Go</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td> Marvin Humphrey </td>
+		</tr>
+		
+		
+		
+	
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://netbeans.incubator.apache.org/">Apache NetBeans (Incubating) </a> </td>
+			<td>NetBeans is a development environment, tooling platform and application framework.</td>
+			<td>development-environment</td>
+			<td>Java</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://nifi.apache.org/">Apache NiFi  </a> </td>
+			<td>Easy to use, powerful, and reliable system to process and distribute data</td>
+			<td>database</td>
+			<td>Java</td>
+			<td data-twitter-handle="@apachenifi"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://nutch.apache.org">Apache Nutch </a> </td>
+			<td>Apache Nutch is an open source web-search software project.</td>
+			<td>web-framework</td>
+			<td>Java</td>
+			<td data-twitter-handle="@ApacheNutch"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href=" http://ode.apache.org">Apache ODE </a> </td>
+			<td> Apache ODE is a WS-BPEL implementation that supports web services orchestration using flexible process definitions.</td>
+			<td> xml, network-server  </td>
+			<td>Java</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://odftoolkit.incubator.apache.org/">Apache ODF Toolkit </a> </td>
+			<td> Java modules that allow programmatic creation, scanning and manipulation of OpenDocument Format (ISO/IEC 26300 == ODF) documents</td>
+			<td></td>
+			<td>Java</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href=" http://ofbiz.apache.org">Apache OFBiz </a> </td>
+			<td> Apache OFBiz (The Apache Open For Business Project) is an open source enterprise automation software project</td>
+			<td> web-framework,database,network-server,xml,http,content  </td>
+			<td>Java,Groovy,JavaScript,XML,Freemarker </td>
+			<td data-twitter-handle="@ApacheOfbiz"></td>
+			<td>Not Checked</td>
+			<td>Jacopo Cappellato,  Jacques Le Roux </td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://olingo.apache.org">Apache Olingo </a> </td>
+			<td> Apache Olingo is a Java and JavaScript library that implements the Open Data Protocol (OData). Apache Olingo serves client and server aspects of OData.</td>
+			<td> library </td>
+			<td>Java,JavaScript </td>
+			<td data-twitter-handle="@ApacheOlingo"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="https://oltu.apache.org/">Apache Oltu - Parent </a> </td>
+			<td> Apache Oltu is an OAuth protocol implementation in Java</td>
+			<td> library </td>
+			<td>Java</td>
+			<td data-twitter-handle="@ApacheOlingo"></td>
+			<td>Not Checked</td>
+			<td>Antonio Sanso  </td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://omid.incubator.apache.org/">Apache Omid (Incubating)  </a> </td>
+			<td> Omid is a flexible, reliable, high performant and scalable ACID transactional framework that allows client applications to execute transactions on top of MVCC key/value-based NoSQL datastores </td>
+			<td> library </td>
+			<td>Java</td>
+			<td data-twitter-handle="@ApacheOmid"></td>
+			<td>Not Checked</td>
+			<td>Antonio Sanso  </td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://oodt.apache.org">Apache OODT  </a> </td>
+			<td> Apache OODT software provides metadata for middleware (and vice versa): - Transparent access to distributed resources - Data discovery and query optimization - Distributed processing and virtual archives . </td>
+			<td> web-framework</td>
+			<td>Java</td>
+			<td data-twitter-handle="@apache_oodt"></td>
+			<td>Not Checked</td>
+			<td> <a href="mailto:dev@oodt.apache.org"> Apache OODT PMC </a> </td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://oozie.apache.org">Apache Oozie   </a> </td>
+			<td> Apache OODT software provides metadata for middleware (and vice versa): - Transparent access to distributed resources - Data discovery and query optimization - Distributed processing and virtual archives . </td>
+			<td> big-data</td>
+			<td>Java</td>
+			<td data-twitter-handle="@ApacheOozie"></td>
+			<td>Not Checked</td>
+			<td> <a href="mailto:mislam77@yahoo.com">  Mohammad Islam  </a> </td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://climate.apache.org">Apache Open Climate Workbench    </a> </td>
+			<td> The Apache Open Climate Workbench(OCW) is a comprehensive suite of algorithms, libraries, and interfaces designed to standardize and streamline the process of interacting with large quantities of observational data (such as is provided by the RCMED) and conducting regional climate model evaluations. </td>
+			<td> content</td>
+			<td>Python</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://climate.apache.org">Apache OpenJPA</a> </td>
+			<td> Java Persistence API Implementation </td>
+			<td> database, library,javaee  </td>
+			<td>Python</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://openmeetings.apache.org/">Apache OpenMeetings </a> </td>
+			<td> Video conferencing, instant messaging, white board and collaborative document editing application. </td>
+			<td> network-server, network-client </td>
+			<td>Java</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://opennlp.apache.org">Apache OpenNLP </a> </td>
+			<td> Apache OpenNLP library software is a machine learning based toolkit for the processing of natural language text.. </td>
+			<td> library </td>
+			<td>Java</td>
+			<td data-twitter-handle="@ApacheOpennlp"></td>
+			<td>Not Checked</td>
+			<td> <a href="mailto:dev@opennlp.apache.org"> Apache OpenNLP PMC </a> </td>
+		</tr>
+		
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://openoffice.apache.org">Apache OpenOffice  </a> </td>
+			<td> An open-source, office-document productivity suite </td>
+			<td> content </td>
+			<td>C++</td>
+			<td data-twitter-handle="@ApacheOO"></td>
+			<td>Not Checked</td>
+			<td> Andrea Pescetti  </td>
+		</tr>
+		
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://openwebbeans.apache.org">Apache OpenWebBeans   </a> </td>
+			<td> Dependency Injection Platform </td>
+			<td> JavaEE</td>
+			<td>Java</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td> Gurkan Erdogdu   </td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://openwhisk.incubator.apache.org/">Apache OpenWhisk (Incubating) </a> </td>
+			<td> Distributed Serverless computing platform </td>
+			<td></td>
+			<td>Java</td>
+			<td data-twitter-handle="@openwhisk"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="https://orc.apache.org">Apache ORC  </a> </td>
+			<td>  A high-performance columnar file format for Hadoop workloads </td>
+			<td>big-data, database, hadoop, library</td>
+			<td>Java, C++</td>
+			<td data-twitter-handle="@apacheorc"></td>
+			<td>Not Checked</td>
+			<td>Owen O'Malley </td>
+		</tr>
+		
+		
+		
+		
+		
+		
+	
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://qpid.apache.org">Apache Qpid </a> </td>
+			<td>AMQP enterprise messaging implementation.</td>
+			<td>network-server,network-client</td>
+			<td>C++,Java,C#,Perl, Python, Ruby </td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://quickstep.incubator.apache.org/">Apache Quickstep (Incubating) </a> </td>
+			<td>Quickstep is a high-performance database engine.</td>
+			<td>database</td>
+			<td>C++,Python</td>
+			<td data-twitter-handle="@ApacheQuickstep"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://ranger.incubator.apache.org/">Apache Ranger (Incubating)  </a> </td>
+			<td>The Ranger project is a framework to enable, monitor and manage comprehensive data security across the Hadoop platform.</td>
+			<td>big-data</td>
+			<td>Java</td>
+			<td data-twitter-handle="@ApacheQuickstep"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://creadur.apache.org/rat/">Apache Rat</a> </td>
+			<td>Apache Rat improves accuracy and efficiency when reviewing and auditing releases.</td>
+			<td>build-management</td>
+			<td>Java</td>
+			<td data-twitter-handle="@ApacheQuickstep"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href=" http://ratis.incubator.apache.org/">Apache Ratis (Incubating) </a> </td>
+			<td>Ratis is a java implementation for RAFT consensus protocol</td>
+			<td></td>
+			<td>Java</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://reef.apache.org/">Apache REEF </a> </td>
+			<td>Apache REEF (Retainable Evaluator Execution Framework) is a scale-out computing fabric that eases the development of Big Data applications on top of resource managers such as Apache YARN and Mesos.</td>
+			<td>big-data</td>
+			<td>Java,C#,C++</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://reef.apache.org/">Apache Reusable Dialog Components (RDC) Taglib</a> </td>
+			<td>A framework for creating JSP taglibs that aid in rapid development of voice and multimodal applications.</td>
+			<td>library</td>
+			<td>JSP</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://river.apache.org">Apache River </a> </td>
+			<td>Apache River software provides a standards-compilant JINI service.</td>
+			<td>library</td>
+			<td>JavaEE</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://tcl.apache.org/rivet/">Apache Rivet  </a> </td>
+			<td>Server-side Tcl programming system combining ease of use and power</td>
+			<td>web-framework</td>
+			<td>TCL</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href=" http://rocketmq.incubator.apache.org/">Apache RocketMQ (Incubating)   </a> </td>
+			<td>RocketMQ is a fast, low latency, reliable, scalable, distributed, easy to use message-oriented middleware, especially for processing large amounts of streaming data.</td>
+			<td></td>
+			<td></td>
+			<td data-twitter-handle="@ApacheRocketMQ"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://roller.apache.org/">Apache Roller</a> </td>
+			<td>Apache Roller is a full-featured, multi-user and group blog server suitable for blog sites large and small.</td>
+			<td>content</td>
+			<td>Java</td>
+			<td data-twitter-handle="@apache_roller"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://rya.incubator.apache.org/">Apache Rya (Incubating) </a> </td>
+			<td>Rya (pronounced "ree-uh" /rēə/) is a cloud-based RDF triple store that supports SPARQL queries.</td>
+			<td>database</td>
+			<td>Java</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		
+		
+		
+		
+		 <tr>
+			<td data-rownumber=""></td>
+			<td><a href=" http://uima.apache.org">Apache UIMA </a> </td>
+			<td>Annotator components and a scalable integration and deployment framework for Unstructured Information analysis</td>
+			<td>library</td>
+			<td>Java, C++</td>
+			<td data-twitter-handle="@ApacheUIMA"></td>
+			<td>Not Checked</td>
+			<td>Marshall Schor </td>
+		</tr>
+		
+		 <tr>
+			<td data-rownumber=""></td>
+			<td><a href=" http://unomi.incubator.apache.org/">Apache Unomi (Incubating)  </a> </td>
+			<td>Reference implementation of the OASIS Context Server specification currently being worked on by the OASIS Context Server Technical Committee</td>
+			<td>library</td>
+			<td>Java</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://usergrid.apache.org/">Apache Usergrid </a> </td>
+			<td>The BaaS Framework you run</td>
+			<td>library</td>
+			<td>Java</td>
+			<td data-twitter-handle="@usergrid"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://vcl.apache.org">Apache VCL   </a> </td>
+			<td> A cloud computing platform for provisioning and brokering access to dedicated remote compute resources.</td>
+			<td>cloud </td>
+			<td>Java</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://velocity.apache.org">Apache Velocity  </a> </td>
+			<td> Java-based template engine</td>
+			<td>library</td>
+			<td>Java</td>
+			<td data-twitter-handle="@Ariaapacheveloc"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://velocity.apache.org/dvsl/devel/">Apache Velocity DVSL </a> </td>
+			<td> A tool modeled after XSLT and intended for general XML transformations using the Velocity Template Language.</td>
+			<td>library</td>
+			<td>Java</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://velocity.apache.org/velocity/tools/">Apache Velocity Tools  </a> </td>
+			<td> Tools and infrastructure for the template engine</td>
+			<td>library</td>
+			<td>Java</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://ant.apache.org/antlibs/proper.html">Apache VSS Ant Library  </a> </td>
+			<td> Microsoft Visual Source Safe support for Apache Ant</td>
+			<td>library</td>
+			<td>Java</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href=" http://vxquery.apache.org/">Apache VXQuery   </a> </td>
+			<td> Apache VXQuery implements a parallel XML Query processor.</td>
+			<td>big-data, xml</td>
+			<td>Java</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://wave.incubator.apache.org/">Apache Wave (Incubating) </a> </td>
+			<td> A wave is a hosted, live, concurrent data structure for rich communication. It can be used like email, chat, or a document.</td>
+			<td>libraries</td>
+			<td>Java</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td>Andrus Adamchik</td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://wave.incubator.apache.org/">Apache Wave (Incubating) </a> </td>
+			<td> A wave is a hosted, live, concurrent data structure for rich communication. It can be used like email, chat, or a document.</td>
+			<td>libraries</td>
+			<td>Java</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td>Andrus Adamchik</td>
+		</tr>
+		
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://whimsy.apache.org/">Apache Whimsy  </a> </td>
+			<td> Whimsy is a site where a set of absolutely unnecessary yet often quite handy applications are deployed.</td>
+			<td>content</td>
+			<td>JavaScript</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://creadur.apache.org/whisker">Apache Whisker   </a> </td>
+			<td> Apache Whisker assists assembled applications to maintain correct legal documentation.</td>
+			<td>build-management</td>
+			<td>Java</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href=" http://wicket.apache.org">Apache Wicket</a> </td>
+			<td> Apache Wicket is an open source Java component oriented web application framework.</td>
+			<td>web-framework</td>
+			<td>Java</td>
+			<td data-twitter-handle="@apache_wicket"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://wink.apache.org">Apache Wink </a> </td>
+			<td> RESTFul web services based on JAX-RS specification.</td>
+			<td>web-framework</td>
+			<td>Java</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://ws.apache.org/woden/">Apache Woden  </a> </td>
+			<td> Subproject of the Apache Web Services to develop a Java class library for reading, manipulating, creating and writing WSDL documents.</td>
+			<td>XML</td>
+			<td>Java</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+				
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://tcl.apache.org/websh">Apache Websh </a> </td>
+			<td> Websh is a rapid development environment for building powerful, fast, and reliable web applications in Tcl</td>
+			<td>web-framework,httpd-module </td>
+			<td>Java</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+		
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://xalan.apache.org/xalan-c">Apache Xalan for C++ XSLT Processor</a> </td>
+			<td> Xalan-C++ is an XSLT processor written in C++.</td>
+			<td>XML</td>
+			<td>Java</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td><a href="mailto:dev@xalan.apache.org">Xalan-C++ Development Team </a></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://xalan.apache.org/xalan-j/">Apache Xalan for Java XSLT Processor </a> </td>
+			<td> Xalan-J is an XSLT processor written in Java.</td>
+			<td>XML</td>
+			<td>Java</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td><a href="mailto:dev@xalan.apache.org">Xalan-J Development Team </a></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://xerces.apache.org/xerces-c/">Apache Xerces for C++ XML Parser  </a> </td>
+			<td> Xerces-C++ is a validating XML parser written in a portable subset of C++.</td>
+			<td>XML</td>
+			<td>C</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td><a href="mailto:c-dev@xerces.apache.org">Xerces-C++ Development Team </a></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href=" http://xerces.apache.org/xerces2-j/">Apache Xerces for Java XML Parser</a> </td>
+			<td> Xerces-J is a validating XML parser written in Java.</td>
+			<td>XML</td>
+			<td>Java</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td><a href="mailto:j-dev@xerces.apache.org">Xerces-J Development Team  </a></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://xerces.apache.org/xerces-p">Apache Xerces for Perl XML Parser </a> </td>
+			<td>  Perl API to the Apache Xerces XML parser.</td>
+			<td>XML</td>
+			<td>Perl</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td><a href="mailto:p-dev@xerces.apache.org">Xerces-Perl Development Team </a></td>
+		</tr>
+		
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://xerces.apache.org/xml-commons/components/external/">Apache XML Commons External </a> </td>
+			<td>  Apache XML Commons External provides an Apache-hosted set of SAX, DOM and JAXP interfaces for use in other xml-based projects.</td>
+			<td>XML</td>
+			<td>Java</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td><a href="mailto:xml-commons-dev@xerces.apache.org">XML Commons Development Team  </a></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://xerces.apache.org/xml-commons/components/resolver/">Apache XML Commons Resolver  </a> </td>
+			<td>  XML Entity and URI Resolver utility class.</td>
+			<td>XML</td>
+			<td>Java</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td><a href="mailto:xml-commons-dev@xerces.apache.org">XML Commons Development Team   </a></td>
+		</tr>
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="http://xmlgraphics.apache.org/commons/">Apache XML Graphics Commons</a> </td>
+			<td>Common components for Apache Batik and Apache FOP</td>
+			<td>graphics</td>
+			<td>Java</td>
+			<td data-twitter-handle="Not Available"></td>
+			<td>Not Checked</td>
+			<td>Jeremias Maerki</td>
+		</tr>
+		
+		
+		
+		
+		<tr>
+			<td data-rownumber=""></td>
+			<td><a href="https://yetus.apache.org/">Apache Yetus  </a> </td>
+			<td> A collection of libraries and tools that enable contribution and release processes for software projects</td>
+			<td>build-management,library,testing  </td>
+			<td>Bash, Java,  Python  </td>
+			<td data-twitter-handle="@ApacheYetus"></td>
+			<td>Not Checked</td>
+			<td></td>
+		</tr>
+	
+	    <tr>
+			<td data-rownumber=""></td>
 			<td><a href="http://zeppelin.apache.org/">Apache Zeppelin</a> </td>
 			<td>Zeppelin is a collaborative data analytics and visualization tool for distributed, general-purpose data processing systems</td>
 			<td>big-data</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheZeppelin"></td>
+			<td data-twitter-handle="@ApacheZeppelin"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
 		
  	    <tr>
-			<td rownumber=""></td>
+			<td data-rownumber=""></td>
 			<td><a href="http://zookeeper.apache.org/">Apache ZooKeeper  </a> </td>
 			<td>A distributed computing platform</td>
 			<td>database</td>
 			<td>Java</td>
-			<td twitter-handle="@ApacheZookeeper"></td>
+			<td data-twitter-handle="@ApacheZookeeper"></td>
 			<td>Not Checked</td>
 			<td></td>
 		</tr>
